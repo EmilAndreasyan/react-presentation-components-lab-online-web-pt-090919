@@ -7,8 +7,11 @@ export default class SimpleComponent extends Component {
   }
   
   handleClick = () => {
-    const toggleMood = this.state.mood === 'happy' ? 'sad' : 'happy'
-    this.setState({mood: toggleMood})
+    // const toggleMood = this.state.mood === 'happy' ? 'sad' : 'happy'
+    // this.setState({mood: toggleMood})
+    this.setState(prevState => {
+      return (mood: !prevState.mood)
+    })
   }
   render(){
     return(
